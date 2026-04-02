@@ -4,7 +4,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 RUN apt update \
 	&& apt install -y \
-	neovim starship tmux git curl
+	sudo gcc neovim starship tmux git curl
 
 RUN useradd -m -s /bin/bash marcopist \
 	&& usermod -aG sudo marcopist \
